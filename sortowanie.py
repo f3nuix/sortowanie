@@ -7,13 +7,15 @@ a = 0
 sorted = False
 
 
+
 while not sorted:
     sorted = True
     for num in numbers:
-        if numbers.index(num) < 9  and num > numbers[(numbers.index(num) + 1)]:
+        if numbers.index(num) < len(numbers) - 1 and num > numbers[(numbers.index(num) + 1)]:
             numbers.insert(numbers.index(num), numbers[(numbers.index(num) + 1)])
             numbers.pop(numbers.index(num)+1)
             sorted = False
     a += 1
 
 print(numbers)
+
